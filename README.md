@@ -113,5 +113,5 @@ Contributions are welcome!
 # 📬 Contact
 
 📧 Email: [chetan@shortfilmtour.in](mailto:chetan@shortfilmtour.in)
-🌐 Website: [https://www.shortfilmtour.in](https://www.shortfilmtour.in)
+🌐 Website: [https://shorts-cinema-ghar.vercel.app/](https://shorts-cinema-ghar.vercel.app/)
 📷 Instagram: @shortscinemaghar
