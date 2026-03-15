@@ -8,12 +8,6 @@ This repository contains the **official website for Shorts CinemaGhar**, which s
 
 ---
 
-# 🌐 Live Website
-
-👉 [https://ok-eta-livid.vercel.app](https://ok-eta-livid.vercel.app)
-
----
-
 # 🚀 Features
 
 * Responsive landing page
