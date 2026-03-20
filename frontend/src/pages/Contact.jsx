@@ -21,14 +21,15 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Submitting...');
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('http://localhost:3000/api/contact', formData);
       if (response.status === 201) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', institution: '', city: '', type: '', message: '' });
       }
     } catch (err) {
       console.error(err);
-      setStatus('error');
+      const errorMsg = err.response?.data?.details || err.response?.data?.error || err.message;
+      setStatus(`error: ${errorMsg}`);
     }
   };
 
@@ -132,7 +133,7 @@ const Contact = () => {
                   <textarea name="message" value={formData.message} onChange={handleChange} rows={4} style={{ width: '100%', padding: '0.75rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-light)', color: 'white', borderRadius: '4px' }}></textarea>
                 </div>
 
-                {status === 'error' && <p style={{ color: 'var(--film-red)', marginBottom: '1rem' }}>An error occurred. Please try again.</p>}
+                {status.startsWith('error') && <p style={{ color: 'var(--film-red)', marginBottom: '1rem' }}>{status.replace('error: ', '')}</p>}
                 
                 <button type="submit" className="btn btn-red" style={{ width: '100%', marginTop: '0.5rem' }} disabled={status === 'Submitting...'}>
                   {status === 'Submitting...' ? 'Submitting...' : 'Start the Conversation →'}

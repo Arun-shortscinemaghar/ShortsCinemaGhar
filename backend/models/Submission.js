@@ -6,6 +6,7 @@ const submissionSchema = new mongoose.Schema({
   duration: { type: String, required: true },
   language: { type: String, required: true },
   synopsis: { type: String, required: true },
+  email: { type: String, required: true },
   posterUrl: { type: String }, // Assuming a URL or file path might be provided
   screeningLink: { type: String, required: true },
   createdAt: { type: Date, default: Date.now }

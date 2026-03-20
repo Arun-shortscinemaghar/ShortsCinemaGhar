@@ -1,25 +1,56 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Contact = require('../models/Contact');
-const Submission = require('../models/Submission');
+const Contact = require("../models/Contact");
+const Submission = require("../models/Submission");
+const {
+  sendContactEmail,
+  sendSubmissionEmail,
+} = require("../config/emailService");
 
-router.post('/contact', async (req, res) => {
+router.post("/contact", async (req, res) => {
+  let contact;
   try {
-    const contact = new Contact(req.body);
+    contact = new Contact(req.body);
     await contact.save();
-    res.status(201).json({ message: 'Contact inquiry received successfully.', contact });
+
+    // Send email separately
+    try {
+      await sendContactEmail(req.body);
+    } catch (emailErr) {
+      console.log("Email failed:", emailErr.message);
+    }
+
+    // Always respond success if DB saved
+    res.status(201).json({
+      message: "Contact saved (email may or may not be sent)",
+      contact,
+    });
   } catch (err) {
-    res.status(500).json({ error: 'Failed to save contact inquiry.', details: err.message });
+    res.status(500).json({
+      error: "Failed to save contact inquiry",
+      details: err.message,
+    });
   }
 });
-
-router.post('/submit', async (req, res) => {
+router.post("/submit", async (req, res) => {
+  let submission;
   try {
-    const submission = new Submission(req.body);
+    submission = new Submission(req.body);
     await submission.save();
-    res.status(201).json({ message: 'Film submission received successfully.', submission });
+
+    // Send email notification - if this fails, it will catch in the outer block
+    await sendSubmissionEmail(req.body);
+
+    res.status(201).json({
+      message: "Film submission received and email sent successfully.",
+      submission,
+    });
   } catch (err) {
-    res.status(500).json({ error: 'Failed to save film submission.', details: err.message });
+    res.status(500).json({
+      error: "Failed to process film submission.",
+      details: err.message,
+      saved: !!submission,
+    });
   }
 });
 

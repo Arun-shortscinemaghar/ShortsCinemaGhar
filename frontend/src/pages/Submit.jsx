@@ -8,6 +8,7 @@ const Submit = () => {
     duration: '',
     language: '',
     synopsis: '',
+    email: '',
     posterUrl: '',
     screeningLink: ''
   });
@@ -21,14 +22,15 @@ const Submit = () => {
     e.preventDefault();
     setStatus('Submitting...');
     try {
-      const response = await axios.post('http://localhost:5000/api/submit', formData);
+      const response = await axios.post('http://localhost:3000/api/submit', formData);
       if (response.status === 201) {
         setStatus('success');
         setFormData({ title: '', director: '', duration: '', language: '', synopsis: '', posterUrl: '', screeningLink: '' });
       }
     } catch (err) {
       console.error(err);
-      setStatus('error');
+      const errorMsg = err.response?.data?.details || err.response?.data?.error || err.message;
+      setStatus(`error: ${errorMsg}`);
     }
   };
 
@@ -117,8 +119,13 @@ const Submit = () => {
                 </div>
 
                 <div style={{ marginBottom: '1rem' }}>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)' }}>Synopsis <span className="text-red">*</span></label>
+                  <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)' }}>Synopsys <span className="text-red">*</span></label>
                   <textarea name="synopsis" value={formData.synopsis} onChange={handleChange} required rows={4} style={{ width: '100%', padding: '0.75rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-light)', color: 'white', borderRadius: '4px' }}></textarea>
+                </div>
+
+                <div style={{ marginBottom: '1rem' }}>
+                  <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-muted)' }}>Your Email <span className="text-red">*</span></label>
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="email@example.com" style={{ width: '100%', padding: '0.75rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-light)', color: 'white', borderRadius: '4px' }} />
                 </div>
 
                 <div style={{ marginBottom: '1rem' }}>
@@ -131,7 +138,7 @@ const Submit = () => {
                   <input type="url" name="posterUrl" value={formData.posterUrl} onChange={handleChange} placeholder="Link to poster image" style={{ width: '100%', padding: '0.75rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-light)', color: 'white', borderRadius: '4px' }} />
                 </div>
 
-                {status === 'error' && <p style={{ color: 'var(--film-red)', marginBottom: '1rem' }}>An error occurred. Please try again.</p>}
+                {status.startsWith('error') && <p style={{ color: 'var(--film-red)', marginBottom: '1rem' }}>{status.replace('error: ', '')}</p>}
                 
                 <button type="submit" className="btn btn-red" style={{ width: '100%' }} disabled={status === 'Submitting...'}>
                   {status === 'Submitting...' ? 'Submitting...' : 'Submit Film'}
