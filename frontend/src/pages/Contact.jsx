@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Submitting...');
     try {
-      const response = await axios.post('http://localhost:3000/api/contact', formData);
+      const response = await axios.post('https://shortscinemaghar.onrender.com/api/contact', formData);
       if (response.status === 201) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', institution: '', city: '', type: '', message: '' });
