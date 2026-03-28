@@ -47,7 +47,7 @@ const Submit = () => {
     e.preventDefault();
     setStatus('Submitting...');
     try {
-      const response = await axios.post('https://shortscinemaghar.onrender.com/api/submit', formData);
+      const response = await axios.post('http://localhost:3000/api/submit', formData);
       if (response.status === 201) {
         setStatus('success');
         setFormData({ title: '', director: '', duration: '', language: '', synopsis: '', posterUrl: '', screeningLink: '', email: '' });

@@ -46,7 +46,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Submitting...');
     try {
-      const response = await axios.post('https://shortscinemaghar.onrender.com/api/contact', formData);
+      const response = await axios.post('http://localhost:3000/api/contact', formData);
       if (response.status === 201) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', institution: '', city: '', type: '', message: '' });
@@ -76,10 +76,10 @@ const Contact = () => {
       <section className="pad-section">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'flex-start', gap: '5rem' }}>
-            
+
             <div className="reveal" ref={addToRefs}>
               <h2 className="title-md" style={{ marginBottom: '2.5rem' }}>How Can We Help?</h2>
-              
+
               <div style={{ display: 'grid', gap: '1.5rem' }}>
                 <div className="value-card">
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Colleges & Institutes</h3>
@@ -107,7 +107,7 @@ const Contact = () => {
 
             <div className="reveal glass" ref={addToRefs} style={{ padding: '3.5rem', borderRadius: '16px', transitionDelay: '0.2s' }}>
               <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Start the Conversation</h3>
-              
+
               {status === 'success' ? (
                 <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
                   <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(40, 167, 69, 0.2)', color: '#28a745', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem', fontSize: '1.5rem' }}>✓</div>
@@ -121,7 +121,7 @@ const Contact = () => {
                     <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-dim)', fontSize: '0.9rem' }}>Full Name *</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required className="form-input" placeholder="Enter your name" />
                   </div>
-                  
+
                   <div className="form-grid">
                     <div>
                       <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-dim)', fontSize: '0.9rem' }}>Email *</label>
@@ -161,7 +161,7 @@ const Contact = () => {
                   </div>
 
                   {status.startsWith('error') && <p style={{ color: 'var(--film-red)', fontSize: '0.9rem' }}>{status.replace('error: ', '')}</p>}
-                  
+
                   <button type="submit" className="btn btn-red" style={{ width: '100%', marginTop: '1rem' }} disabled={status === 'Submitting...'}>
                     {status === 'Submitting...' ? 'Sending...' : 'Start the Conversation →'}
                   </button>

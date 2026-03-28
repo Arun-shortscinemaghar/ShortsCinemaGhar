@@ -17,7 +17,7 @@ router.post("/contact", async (req, res) => {
     try {
       await sendContactEmail(req.body);
     } catch (emailErr) {
-      console.log("Email failed:", emailErr.message);
+      
     }
 
     // Always respond success if DB saved
