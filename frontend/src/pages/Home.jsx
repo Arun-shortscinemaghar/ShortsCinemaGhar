@@ -41,10 +41,10 @@ const Home = () => {
                 <span className="text-red">Short Film Ecosystem</span>
               </h1>
               <p style={{ maxWidth: '800px', margin: '2rem auto 3rem', fontSize: '1.25rem', color: 'var(--text-secondary)' }}>
-                We bring film screenings, industry mentorship, workshops, and national tour exposure directly to college campuses — turning student talent into real careers.
+                We introduce students to films with guided film creation, mentorship, workshop, screenings and national tour exposure - turning student talent into real careers.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link to="/contact" className="btn btn-red">Bring it to Your Campus →</Link>
+                <Link to="/contact" className="btn btn-red">Explore Partnership →</Link>
                 <Link to="/submit" className="btn btn-outline">Submit Your Film</Link>
               </div>
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
               </div>
               <h3 style={{ marginBottom: '1.5rem' }}>For Filmmakers</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                Screen your film. Reach new audiences. Earn recognition. Get onto the national tour circuit — zero entry fees.
+                Screen your film. Reach new audiences. Earn money & recognition. Get onto the national tour circuit — zero entry fees.
               </p>
             </div>
           </div>
