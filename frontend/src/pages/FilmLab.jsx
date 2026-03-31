@@ -54,9 +54,6 @@ const FilmLab = () => {
           <p style={{ fontSize: '1.25rem', marginTop: '2rem', lineHeight: '1.7', color: 'var(--text-secondary)', maxWidth: '900px', margin: '2rem auto 3rem' }}>
             A national short film incubation program designed to support filmmakers from concept to screen
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-            <Link to="/submit" className="btn btn-red">Apply for the Grant →</Link>
-            <p className="text-dim" style={{ fontSize: '0.9rem', maxWidth: '400px', textAlign: 'center', margin: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', marginTop: '3rem' }}>
             <Link to="/submit" className="btn btn-red">Apply for the Grant →</Link>
             <p className="text-dim" style={{ fontSize: '0.9rem', maxWidth: '450px', textAlign: 'center', lineHeight: '1.6' }}>

@@ -134,9 +134,6 @@ const SchoolsEdition = () => {
             </div>
             <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.4s' }}>
               <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Parents <span className="text-red">Witness</span></h3>
-
-            <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.2s' }}>
-              <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Institutional <span className="text-red">Growth.</span></h3>
               <ul className="outcome-list">
                 <li className="outcome-item">Improved articulation</li>
                 <li className="outcome-item">Visible confidence growth</li>
