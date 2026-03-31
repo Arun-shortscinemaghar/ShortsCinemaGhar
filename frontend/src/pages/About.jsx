@@ -52,13 +52,14 @@ const About = () => {
             <div className="reveal" ref={addToRefs}>
               <h2 className="title-lg" style={{ marginBottom: '2rem' }}>Born from Short Film Tour — <span className="text-red">Built for Indian Campuses</span></h2>
               <p className="text-muted" style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                Shorts Cinemaghar is powered by Short Film Tour — India's first offline short film platform. After years of running screenings, building filmmaker networks, and watching short films transform audiences across cities, we saw a massive gap: colleges wanted real creative programs, and student filmmakers wanted real platforms.
+                Shorts Cinemaghar is powered by Short Film Tour — India's first offline short film platform. After years of running screenings, building filmmaker networks, and watching short films transform audiences across cities, we saw a massive gap: colleges & school wanted real creative programs, and student filmmakers wanted real platforms.
               </p>
               <p className="text-muted" style={{ fontWeight: 600, color: 'var(--text-main)', marginBottom: '1.5rem' }}>
                 So we built one that serves both.
               </p>
               <p className="text-muted">
-                Shorts Cinemaghar is India's first campus-rooted cinematic ecosystem — a structured, year-round program that brings film screenings, masterclasses, production labs, jury recognition, digital distribution, and national tour exposure directly to your campus.
+                Shorts Cinemaghar is India’s first campus rooted cinematic ecosystem - a structured year-round program that introduces students to films with guided film creation, mentorship, workshop, screenings and national tour exposure - turning student talent into real careers. 
+
               </p>
             </div>
             <div className="reveal value-card" ref={addToRefs} style={{ transitionDelay: '0.2s', padding: '4rem' }}>

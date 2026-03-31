@@ -52,7 +52,7 @@ const FilmLab = () => {
             <span className="text-gradient">Into a Funded Film</span>
           </h1>
           <p style={{ fontSize: '1.25rem', marginTop: '2rem', lineHeight: '1.7', color: 'var(--text-secondary)', maxWidth: '900px', margin: '2rem auto 3rem' }}>
-            India's first short film incubation program designed to take one story from concept to screen. Get full funding, professional mentorship, and a national release.
+            A national short film incubation program designed to support filmmakers from concept to screen
           </p>
           <div className="flex-center" style={{ gap: '1.5rem', flexWrap: 'wrap' }}>
             <Link to="/submit" className="btn btn-red">Apply for the Grant →</Link>

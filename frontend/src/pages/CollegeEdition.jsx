@@ -50,7 +50,7 @@ const CollegeEdition = () => {
               <p style={{ color: 'var(--film-red)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '1.5rem' }}>The Vision</p>
               <h2 className="title-md" style={{ marginBottom: '2rem' }}>Talent Exists Everywhere.<br /><span className="text-red">Opportunity Does Not.</span></h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                Students in non-metro cities have the ambition, but the industry doesn't always come to them. Cultural events often come and go without lasting impact.
+                Students have the ambition, but the industry doesn't always come to them. Cultural events often come and go without lasting impact.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
                 Shorts Cinemaghar changes that by building a permanent platform for creators where they are.
@@ -101,28 +101,141 @@ const CollegeEdition = () => {
 
       <section className="pad-section">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div className="reveal glass" ref={addToRefs} style={{ borderColor: 'var(--gold)', padding: '4rem', background: 'radial-gradient(circle at top right, rgba(212, 175, 55, 0.05), transparent)' }}>
-              <p style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '1.5rem' }}>International Entry</p>
-              <h2 className="title-md" style={{ marginBottom: '2rem', color: 'var(--gold)' }}>Direct Path to<br />Krakow, Poland.</h2>
-              <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.8', marginBottom: '2.5rem' }}>
-                Winning films get official selection at the Showcase International Short Film Festival. Zero entry fees. Full sponsorship. Global exposure for your university.
-              </p>
-              <div className="quote-block" style={{ margin: 0, padding: '1.5rem', borderColor: 'var(--gold)', color: 'var(--gold)' }}>
-                "Launching filmmakers onto the global stage."
-              </div>
+          <div className="reveal glass" ref={addToRefs} style={{ borderColor: 'var(--gold)', padding: '4rem', background: 'radial-gradient(circle at top right, rgba(212, 175, 55, 0.05), transparent)', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '1.5rem' }}>International Entry</p>
+            <h2 className="title-md" style={{ marginBottom: '2rem', color: 'var(--gold)' }}>Direct Path to<br />Krakow, Poland.</h2>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.8', marginBottom: '2.5rem' }}>
+              Winning films get official selection at the Showcase International Short Film Festival. Zero entry fees. Full sponsorship. Global exposure for your university.
+            </p>
+            <div className="quote-block" style={{ margin: '0 auto', padding: '1.5rem', borderColor: 'var(--gold)', color: 'var(--gold)', maxWidth: 'max-content' }}>
+              "Launching filmmakers onto the global stage."
             </div>
-            <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.2s' }}>
-              <h2 className="title-md" style={{ marginBottom: '2.5rem' }}>Campus <span className="text-red">Packages.</span></h2>
-              <div style={{ display: 'grid', gap: '1.5rem' }}>
-                {['Base Package: Best for Cultural Fests', 'Engagement Package: NAAC-Aligned Activities', 'Premium Package: National Visibility'].map((pkg, i) => (
-                  <div key={i} style={{ padding: '1.5rem 2rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-light)', borderRadius: '8px' }}>
-                    <p style={{ margin: 0, fontWeight: 500 }}>{pkg}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="pad-section" style={{ background: 'rgba(255,255,255,0.02)', borderTop: '1px solid var(--border-light)' }}>
+        <div className="container">
+          <div className="section-title-block reveal" ref={addToRefs} style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 className="title-lg">Campus <span className="text-red">Packages</span></h2>
+            <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '1.1rem' }}>Choose the package that fits your university's growth ambition.</p>
+          </div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+            {[
+              {
+                name: "Base Package",
+                themeColor: "var(--film-red)",
+                bgGradient: "rgba(220, 38, 38, 0.15)",
+                borderCol: "rgba(220, 38, 38, 0.2)",
+                bestFor: "First time collaboration / Cultural Fest Integration",
+                includes: [
+                  "Curated film screenings",
+                  "On-campus short film competition",
+                  "Jury recognition & awards",
+                  "Institute branding on all creatives",
+                  "Social media collaboration"
+                ],
+                outcomes: [
+                  "Entry-level student engagement",
+                  "Cultural prestige for festivals",
+                  "Content assets for admissions marketing"
+                ],
+                revenue: [
+                  "Ticketed campus screenings",
+                  "Local sponsor placements",
+                  "Brand visibility ROI"
+                ]
+              },
+              {
+                name: "Engagement Package",
+                themeColor: "#3b82f6",
+                bgGradient: "rgba(59, 130, 246, 0.15)",
+                borderCol: "rgba(59, 130, 246, 0.2)",
+                bestFor: "Skill Development + NAAC-Aligned Activities",
+                includes: [
+                  "1-2 day filmmaking workshop",
+                  "Script & edit learning labs",
+                  "Mentor on boarding",
+                  "Dedicated institute YouTube playlist",
+                  "80% revenue share on digital premieres"
+                ],
+                outcomes: [
+                  "Hands-on academic value",
+                  "Strong NAAC & placement narratives",
+                  "Faculty + student upskilling"
+                ],
+                revenue: [
+                  "YouTube ad revenue share",
+                  "Sponsored workshops",
+                  "Certification program fees"
+                ]
+              },
+              {
+                name: "Premium Package",
+                themeColor: "#a855f7",
+                bgGradient: "rgba(168, 85, 247, 0.15)",
+                borderCol: "rgba(168, 85, 247, 0.2)",
+                bestFor: "Flagship Campus Branding + National Visibility",
+                includes: [
+                  "Celebrity guest (physical or virtual)",
+                  "National-level entry for winners",
+                  "Multi-city screenings",
+                  "Digital distribution support",
+                  "Brand activations & PR support"
+                ],
+                outcomes: [
+                  "National-level campus recognition",
+                  "Strong admissions differentiation",
+                  "High-profile alumni success stories"
+                ],
+                revenue: [
+                  "Sponsorship deals",
+                  "Ticketed public screenings",
+                  "Long-term digital content income",
+                  "Brand-backed cultural IP creation"
+                ]
+              }
+            ].map((pkg, i) => (
+              <div key={i} className="reveal glass" ref={addToRefs} style={{ transitionDelay: `${i * 0.1}s`, display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}>
+                <div style={{ padding: '2rem', background: `linear-gradient(to bottom, ${pkg.bgGradient}, transparent)`, borderBottom: `1px solid ${pkg.borderCol}` }}>
+                  <h3 style={{ fontSize: '1.8rem', color: pkg.themeColor, marginBottom: '0.75rem' }}>{pkg.name}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5', margin: 0 }}>Best for: {pkg.bestFor}</p>
+                </div>
+                <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                  <div>
+                    <h4 style={{ color: 'white', marginBottom: '1.25rem', fontSize: '1.1rem' }}>Includes:</h4>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                      {pkg.includes.map((item, idx) => (
+                        <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.4' }}>
+                          <span style={{ color: '#22c55e', marginRight: '0.75rem', fontSize: '1.1rem' }}>✓</span> {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
+                  <div>
+                    <h4 style={{ color: 'white', marginBottom: '1.25rem', fontSize: '1.1rem' }}>Institute Outcomes:</h4>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                      {pkg.outcomes.map((item, idx) => (
+                        <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.4' }}>
+                          <span style={{ color: pkg.themeColor, marginRight: '0.75rem', fontSize: '1.2rem', lineHeight: '1' }}>•</span> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 style={{ color: 'white', marginBottom: '1.25rem', fontSize: '1.1rem' }}>Revenue Potential:</h4>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                      {pkg.revenue.map((item, idx) => (
+                        <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.4' }}>
+                          <span style={{ color: '#22c55e', marginRight: '0.75rem', fontSize: '1.2rem', lineHeight: '1' }}>•</span> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <p style={{ marginTop: '2.5rem', color: 'var(--text-muted)' }}>Choose the package that fits your university's growth ambition.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

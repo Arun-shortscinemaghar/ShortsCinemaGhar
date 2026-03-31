@@ -86,7 +86,12 @@ const Submit = () => {
                   <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem' }}>Campus Screenings</h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Your film reaches real college audiences across India — live reactions and real conversations.</p>
                 </div>
-
+                <div className="value-card">
+                  <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem' }}>Fair Remuneration</h4>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Monetize your film with paid per screening, per location. 
+</p>
+                </div>
+                
                 <div className="value-card">
                   <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem' }}>National Tour Entry</h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Selected films tour multiple cities as part of the Short Film Tour network.</p>

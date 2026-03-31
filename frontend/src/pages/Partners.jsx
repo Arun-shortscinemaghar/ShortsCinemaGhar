@@ -59,6 +59,13 @@ const Partners = () => {
                   <p style={{ color: 'var(--text-muted)' }}>India's first offline short film platform. The backbone of our national tour circuit and digital distribution network.</p>
                 </div>
               </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
+                <div className="value-card">
+                  <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '1rem' }}>The Paperclip</h3>
+                  <p style={{ color: 'var(--text-muted)' }}>Building India’s first Research-to-Film Lab for Students & Independent Filmmakers.
+</p>
+                </div>
+              </div>
             </div>
 
             <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.1s' }}>

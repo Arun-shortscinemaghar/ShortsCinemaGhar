@@ -64,8 +64,8 @@ const Contact = () => {
         <div className="container reveal" ref={addToRefs}>
           <p style={{ color: 'var(--film-red)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '1.5rem', fontSize: '0.85rem' }}>Reach Out</p>
           <h1 className="title-xl">
-            Let's Build Something<br />
-            <span className="text-gradient">on Your Campus</span>
+            Let's Build<br />
+            <span className="text-gradient">Visual Storytelling Inside Campus</span>
           </h1>
           <p style={{ fontSize: '1.25rem', marginTop: '2rem', lineHeight: '1.7', color: 'var(--text-secondary)', maxWidth: '900px', margin: '2rem auto 0' }}>
             Whether you're a college, a filmmaker, or a brand — we'd love to hear from you. Every great collaboration starts with one conversation.
@@ -82,7 +82,7 @@ const Contact = () => {
 
               <div style={{ display: 'grid', gap: '1.5rem' }}>
                 <div className="value-card">
-                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Colleges & Institutes</h3>
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Colleges & Schools</h3>
                   <p style={{ color: 'var(--film-red)', fontWeight: 600, fontSize: '0.85rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Bring the experience home</p>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Consult with us on bringing the Shorts Cinemaghar ecosystem to your students.</p>
                 </div>
