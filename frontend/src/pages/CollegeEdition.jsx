@@ -81,7 +81,7 @@ const CollegeEdition = () => {
           <div className="section-title-block reveal" ref={addToRefs}>
             <h2 className="title-lg">The 4-Phase <span className="text-gradient">Model</span></h2>
           </div>
-          
+
           <div className="phase-grid">
             {[
               { step: '01', title: 'Launch', desc: 'Curated screenings and campus-wide competitions to ignite the creative spark.' },
@@ -120,7 +120,7 @@ const CollegeEdition = () => {
             <h2 className="title-lg">Campus <span className="text-red">Packages</span></h2>
             <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '1.1rem' }}>Choose the package that fits your university's growth ambition.</p>
           </div>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {[
               {
@@ -246,10 +246,52 @@ const CollegeEdition = () => {
             <h2 className="title-lg">Industry <span className="text-red">Mentors</span></h2>
             <p style={{ color: 'var(--text-muted)', marginTop: '1rem' }}>Professionals who show up in person for your students.</p>
           </div>
-          <div className="flex-center" style={{ gap: '2rem', flexWrap: 'wrap' }}>
-            {['Anubhav Sinha', 'Mukesh S. Bhatt', 'Ishteyak Khan', 'Manuj Sharma', 'Manu Rishi Chadha'].map((name, i) => (
-              <div key={i} className="reveal glass" ref={addToRefs} style={{ padding: '1.5rem 2.5rem', borderRadius: '50px', transitionDelay: `${i * 0.1}s` }}>
-                <p style={{ margin: 0, fontWeight: 600, fontSize: '0.95rem' }}>{name}</p>
+          <div className="mentor-grid">
+            {[
+              {
+                name: 'Anubhav Sinha',
+                role: 'Director',
+                img: '/assets/gallery/Industry Mentors/Anubhav SInha.jpg',
+                delay: '0.1s'
+              },
+              {
+                name: 'Mukesh S. Bhatt',
+                role: 'Actor',
+                img: '/assets/gallery/Industry Mentors/mukesh-bhatt---actor.jpg',
+                delay: '0.2s'
+              },
+              {
+                name: 'Ishteyak Khan',
+                role: 'Actor',
+                img: '/assets/gallery/Industry Mentors/Ishteyak Khan.jpeg',
+                delay: '0.3s'
+              },
+              {
+                name: 'Manuj Sharma',
+                role: 'Actor',
+                img: '/assets/gallery/Industry Mentors/Manuj sharma.jpg',
+                delay: '0.4s'
+              },
+              {
+                name: 'Manu Rishi Chadha',
+                role: 'Actor & Writer',
+                img: '/assets/gallery/Industry Mentors/Manu rishi chadha.jpeg',
+                delay: '0.5s'
+              }
+            ].map((mentor, i) => (
+              <div
+                key={i}
+                className="mentor-card reveal"
+                ref={addToRefs}
+                style={{ transitionDelay: mentor.delay }}
+              >
+                <div className="mentor-img-wrapper">
+                  <img src={mentor.img} alt={mentor.name} className="mentor-img" />
+                </div>
+                <div className="mentor-info">
+                  <h3 className="mentor-name">{mentor.name}</h3>
+                  <span className="mentor-role">{mentor.role}</span>
+                </div>
               </div>
             ))}
           </div>
