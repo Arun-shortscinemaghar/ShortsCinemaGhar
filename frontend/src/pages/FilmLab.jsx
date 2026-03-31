@@ -54,9 +54,9 @@ const FilmLab = () => {
           <p style={{ fontSize: '1.25rem', marginTop: '2rem', lineHeight: '1.7', color: 'var(--text-secondary)', maxWidth: '900px', margin: '2rem auto 3rem' }}>
             A national short film incubation program designed to support filmmakers from concept to screen
           </p>
-          <div className="flex-center" style={{ gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
             <Link to="/submit" className="btn btn-red">Apply for the Grant →</Link>
-            <p className="text-dim" style={{ fontSize: '0.9rem', maxWidth: '400px', textAlign: 'left' }}>
+            <p className="text-dim" style={{ fontSize: '0.9rem', maxWidth: '400px', textAlign: 'center', margin: 0 }}>
               Open to emerging directors & film students. No completed film required—submit your <strong>script</strong>, not your footage.
             </p>
           </div>

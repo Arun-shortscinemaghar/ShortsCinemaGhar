@@ -113,7 +113,7 @@ const SchoolsEdition = () => {
 
       <section className="pad-section">
         <div className="container">
-          <div className="grid-2">
+          <div className="grid-3">
             <div className="reveal" ref={addToRefs}>
               <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Skills for the <span className="text-red">Future.</span></h3>
               <ul className="outcome-list">
@@ -132,13 +132,13 @@ const SchoolsEdition = () => {
                 <li className="outcome-item">Admissions-ready branding content</li>
               </ul>
             </div>
-            <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.2s' }}>
-              <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Institutional <span className="text-red">Growth.</span></h3>
+            <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.4s' }}>
+              <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Parents <span className="text-red">Witness</span></h3>
               <ul className="outcome-list">
-                <li className="outcome-item">High-visibility academically balanced showcase</li>
-                <li className="outcome-item">Strengthened parent engagement and trust</li>
-                <li className="outcome-item">Modern creative exposure for students</li>
-                <li className="outcome-item">Admissions-ready branding content</li>
+                <li className="outcome-item">Improved articulation</li>
+                <li className="outcome-item">Visible confidence growth</li>
+                <li className="outcome-item">Meaningful and structured screen engagement</li>
+                <li className="outcome-item">Recognition and certification moments</li>
               </ul>
             </div>
           </div>
