@@ -90,7 +90,7 @@ const SchoolsEdition = () => {
           <div className="section-title-block reveal" ref={addToRefs}>
             <h2 className="title-lg">The 3-Phase <span className="text-gradient">Journey</span></h2>
           </div>
-          
+
           <div className="phase-grid">
             <div className="phase-card reveal" ref={addToRefs} style={{ transitionDelay: '0.1s' }}>
               <h4>Phase 1</h4>
@@ -134,6 +134,9 @@ const SchoolsEdition = () => {
             </div>
             <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.4s' }}>
               <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Parents <span className="text-red">Witness</span></h3>
+
+            <div className="reveal" ref={addToRefs} style={{ transitionDelay: '0.2s' }}>
+              <h3 className="title-md" style={{ marginBottom: '2.5rem' }}>Institutional <span className="text-red">Growth.</span></h3>
               <ul className="outcome-list">
                 <li className="outcome-item">Improved articulation</li>
                 <li className="outcome-item">Visible confidence growth</li>

@@ -43,27 +43,24 @@ const Partners = () => {
         </div>
       </section>
 
-      <section className="pad-section">
+      <section className="pad-section" style={{ paddingTop: 0 }}>
         <div className="container">
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '5rem', maxWidth: '1100px', margin: '0 auto 6rem' }}>
-            
+
             <div className="reveal" ref={addToRefs}>
               <h2 className="title-md" style={{ marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <span style={{ height: '2px', width: '40px', background: 'var(--film-red)' }}></span>
                 Platform Partners
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                <div className="value-card">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem' }}>
+                <div className="value-card" style={{ height: '100%' }}>
                   <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '1rem' }}>Short Film Tour</h3>
                   <p style={{ color: 'var(--text-muted)' }}>India's first offline short film platform. The backbone of our national tour circuit and digital distribution network.</p>
                 </div>
-              </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
-                <div className="value-card">
+                <div className="value-card" style={{ height: '100%' }}>
                   <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '1rem' }}>The Paperclip</h3>
-                  <p style={{ color: 'var(--text-muted)' }}>Building India’s first Research-to-Film Lab for Students & Independent Filmmakers.
-</p>
+                  <p style={{ color: 'var(--text-muted)' }}>Building India’s first Research-to-Film Lab for Students & Independent Filmmakers.</p>
                 </div>
               </div>
             </div>
@@ -73,13 +70,18 @@ const Partners = () => {
                 <span style={{ height: '2px', width: '40px', background: 'var(--film-red)' }}></span>
                 Brand Partners
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
-                <div className="glass flex-center" style={{ height: '120px', padding: '2rem' }}>
-                  <h3 style={{ fontSize: '1.5rem', letterSpacing: '0.1em', opacity: 0.6 }}>AIRTEL</h3>
-                </div>
-                <div className="glass flex-center" style={{ height: '120px', padding: '2rem' }}>
-                  <h3 style={{ fontSize: '1.5rem', letterSpacing: '0.1em', opacity: 0.6 }}>SONY</h3>
-                </div>
+              <div className="logo-grid">
+                {[
+                  { name: "AIRTEL", img: "/assets/gallery/our partners/airtel-logo-white-text-horizontal.jpg" },
+                  { name: "SONY", img: "/assets/gallery/our partners/sony.jpeg" }
+                ].map((item, idx) => (
+                  <div key={idx} className="logo-item">
+                    <div className="logo-box">
+                      <img src={item.img} alt={item.name} className="logo-img" />
+                    </div>
+                    <span className="partner-name">{item.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -88,20 +90,21 @@ const Partners = () => {
                 <span style={{ height: '2px', width: '40px', background: 'var(--film-red)' }}></span>
                 Festival & Film Partners
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
-                <div className="value-card" style={{ padding: '2rem' }}>
-                  <h4 style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>Bandra Film Festival</h4>
-                </div>
-                <div className="value-card" style={{ padding: '2rem', borderColor: 'var(--gold)' }}>
-                  <h4 style={{ color: 'var(--gold)', marginBottom: '0.5rem' }}>Showcase Int. Short Film Festival</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-dim)' }}>Krakow, Poland</p>
-                </div>
-                <div className="value-card" style={{ padding: '2rem' }}>
-                  <h4 style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>Warsaw Film School</h4>
-                </div>
-                <div className="value-card" style={{ padding: '2rem' }}>
-                  <h4 style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>KIFA</h4>
-                </div>
+              <div className="logo-grid">
+                {[
+                  { name: "Bandra Film Festival", img: "/assets/gallery/our partners/BandraFilmFestival.jpeg" },
+                  { name: "Showcase Int. Short Film Festival", img: "/assets/gallery/our partners/krakowie.jpeg" },
+
+                  { name: "humaramovie", img: "/assets/gallery/our partners/hamaramovie.jpeg" },
+                  { name: "Pocket Films", img: "/assets/gallery/our partners/WhatsApp Image 2025-11-03 at 1.01.40 PM.jpeg" }
+                ].map((item, idx) => (
+                  <div key={idx} className="logo-item">
+                    <div className="logo-box">
+                      <img src={item.img} alt={item.name} className="logo-img" />
+                    </div>
+                    <span className="partner-name">{item.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -110,15 +113,23 @@ const Partners = () => {
                 <span style={{ height: '2px', width: '40px', background: 'var(--film-red)' }}></span>
                 Institutional Partners
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
-                <div className="value-card">
-                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Graphic Era Hill University</h3>
-                  <p style={{ color: 'var(--text-muted)' }}>Dehradun Campus - Our flagship implementation partner.</p>
-                </div>
-                <div className="value-card">
-                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>University of Delhi</h3>
-                  <p style={{ color: 'var(--text-muted)' }}>Dept. of African Studies - Cultural & Academic collaboration.</p>
-                </div>
+              <div className="logo-grid">
+                {[
+                  { name: "Graphic Era Hill University", img: "/assets/gallery/our partners/GraphicEraHillUni.jpeg" },
+                  { name: "University of Delhi", img: "/assets/gallery/our partners/Delhi university.jpeg" },
+                  { name: "Government of Uttarakhand", img: "/assets/gallery/our partners/UttShashan.jpeg" },
+                  { name: "KIFA", img: "/assets/gallery/our partners/Kifa.jpeg" },
+                  { name: "Warsaw Film School", img: "/assets/gallery/our partners/WFS (2).png" },
+
+
+                ].map((item, idx) => (
+                  <div key={idx} className="logo-item">
+                    <div className="logo-box">
+                      <img src={item.img} alt={item.name} className="logo-img" />
+                    </div>
+                    <span className="partner-name">{item.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
