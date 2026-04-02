@@ -55,12 +55,12 @@ const Partners = () => {
               </h2>
               <div className="logo-grid">
                 {[
-                  { name: 'Short Film Tour', img: '/assets/gallery/our partners/SFT png (1).png' },
-                  { name: 'The Paperclip', img: '/assets/gallery/our partners/PaperClip.jpg' }
+                  { name: 'Short Film Tour', img: '/assets/gallery/our partners/SFT png (1).png', padding: '1rem', imgStyle: { transform: 'scale(1.5)' } },
+                  { name: 'The Paperclip', img: '/assets/gallery/our partners/paperclip_modern.png', padding: '1rem' }
                 ].map((item, idx) => (
                   <div key={idx} className="logo-item">
-                    <div className="logo-box">
-                      <img src={item.img} alt={item.name} className="logo-img" />
+                    <div className="logo-box" style={{ padding: item.padding || '2rem' }}>
+                      <img src={item.img} alt={item.name} className="logo-img" style={item.imgStyle || {}} />
                     </div>
                     <span className="partner-name">{item.name}</span>
                   </div>
@@ -122,7 +122,7 @@ const Partners = () => {
                   { name: "University of Delhi", img: "/assets/gallery/our partners/Delhi university.jpeg" },
                   { name: "Government of Uttarakhand", img: "/assets/gallery/our partners/UttShashan.jpeg" },
                   { name: "KIFA", img: "/assets/gallery/our partners/Kifa.jpeg" },
-                  { name: "Warsaw Film School", img: "/assets/gallery/our partners/WFS (2).png" },
+                  { name: "Warsaw Film School", img: "/assets/gallery/our partners/WFS (2).jpeg" },
 
 
                 ].map((item, idx) => (
