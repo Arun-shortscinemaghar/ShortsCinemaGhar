@@ -56,7 +56,7 @@ const Partners = () => {
               <div className="logo-grid">
                 {[
                   { name: 'Short Film Tour', img: '/assets/gallery/our partners/SFT png (1).png', padding: '1rem', imgStyle: { transform: 'scale(1.5)' } },
-                  { name: 'The Paperclip', img: '/assets/gallery/our partners/paperclip_modern.png', padding: '1rem' }
+                  { name: 'The Paperclip', img: '/assets/gallery/our partners/paperclip_modern.png', padding: '1rem', imgStyle: { transform: 'scale(1.5)' } }
                 ].map((item, idx) => (
                   <div key={idx} className="logo-item">
                     <div className="logo-box" style={{ padding: item.padding || '2rem' }}>
